@@ -186,3 +186,9 @@ it('test style attributes and important priority', function() {
       juice.inlineContent('<div style="color: red !important;"></div>', 'div { color: black !important; }'),
       '<div style="color: red;"></div>');
 });
+
+it('backtracking catastroph', function(){
+  assert.deepEqual(
+      juice.inlineContent('<%asbdhjas dgkjhfa vdhjadvgfhag dfjah dfahjmdvga djah dgfasdad amkasbdhjas dgkjhfa vdhjadvgfhag dfjah dfahjmdvga djah dgfasdad amkasbdhjas dgkjhfa vdhjadvgfhag dfjah dfahjmdvga djah dgfasdad amkasbdhjas dgkjhfa vdhjadvgfhag dfjah dfahjmdvga djah dgfasdad amkasbdhjas dgkjhfa vdhjadvgfhag dfjah dfahjmdvga djah dgfasdad amkasbdhjas dgkjhfa vdhjadvgfhag', ''),
+                          '');
+});
